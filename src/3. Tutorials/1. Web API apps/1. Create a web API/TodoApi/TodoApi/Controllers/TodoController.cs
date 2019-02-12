@@ -56,7 +56,7 @@ namespace TodoApi.Controllers
             _context.TodoItems.Add(todoItem);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetTodoItem", new { id = todoItem.Id }, todoItem);
+            return CreatedAtAction(nameof(GetTodoItem), new { id = todoItem.Id }, todoItem);
         }
 
         // PUT: api/Todo/5
@@ -87,7 +87,7 @@ namespace TodoApi.Controllers
             _context.TodoItems.Remove(todoItem);
             await _context.SaveChangesAsync();
 
-            return todoItem;
+            return NoContent();
         }
     }
 }

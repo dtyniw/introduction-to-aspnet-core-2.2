@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -56,7 +57,7 @@ namespace RoutingSample
                 var vpc = new VirtualPathContext(context, null, dictionary, 
                     "Track Package Route");
                 var path = routes.GetVirtualPath(vpc).VirtualPath;
-
+                
                 context.Response.ContentType = "text/html";
                 await context.Response.WriteAsync("Menu<hr/>");
                 await context.Response.WriteAsync(

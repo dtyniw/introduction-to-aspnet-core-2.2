@@ -1,4 +1,4 @@
-﻿#define StatusCodePages // or StatusCodePagesWithRedirect
+﻿#define  StatusCodePagesWithRedirect
 
 using System;
 using System.Net;
